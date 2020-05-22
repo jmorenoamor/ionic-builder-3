@@ -28,7 +28,7 @@ ENV PATH ${GRADLE_HOME}/bin:${JAVA_HOME}/bin:${ANDROID_HOME}/tools:$ANDROID_HOME
 # ##################################################################################################
 # Base packages
 # ##################################################################################################
-RUN apt-get update && apt-get install -y --no-install-recommends curl software-properties-common unzip
+RUN apt-get update && apt-get install -y --no-install-recommends curl software-properties-common unzip rsync
 #make python git
 
 # ##################################################################################################
