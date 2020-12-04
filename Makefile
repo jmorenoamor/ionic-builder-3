@@ -1,5 +1,5 @@
 build:
-	@docker build -t jmorenoamor/ionic-builder-3:latest .
+	@docker build -t jmorenoamor/ionic-builder-3:29 .
 
 push:
-	@docker push jmorenoamor/ionic-builder-3:latest
+	@docker push jmorenoamor/ionic-builder-3:29

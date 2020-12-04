@@ -13,23 +13,23 @@ LABEL org.opencontainers.image.description="Ionic 3 builder image"
 ENV GRADLE_HOME /usr/local/gradle
 ENV GRADLE_VERSION 6.0.1
 
-ENV CORDOVA_VERSION 7.0.0
-ENV IONIC_VERSION 3.9.2
+ENV CORDOVA_VERSION 10.0.0
+ENV IONIC_VERSION 3.20.0
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV ANDROID_TOOLS_VERSION r25.2.5
-ENV ANDROID_API_LEVELS android-28
-ENV ANDROID_BUILD_TOOLS_VERSION 28.0.2
+ENV ANDROID_API_LEVELS android-29
+ENV ANDROID_BUILD_TOOLS_VERSION 29.0.2
 
 ENV PATH ${GRADLE_HOME}/bin:${JAVA_HOME}/bin:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools:$PATH
 
 # ##################################################################################################
 # Base packages
 # ##################################################################################################
-RUN apt-get update && apt-get install -y --no-install-recommends curl software-properties-common unzip rsync
-#make python git
+RUN apt-get update && apt-get install -y --no-install-recommends curl software-properties-common \
+    unzip rsync make
 
 # ##################################################################################################
 # Install Java
